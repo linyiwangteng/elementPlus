@@ -1,3 +1,7 @@
+# elementPlus
+
+element plus design use
+
 # Vue Admin：直播欢迎语管理原型
 
 基于 Vue 3、TypeScript 和 Element Plus 的单页管理后台，包含工作台、系统设置和话术管理。当前核心功能是直播欢迎语的本地编辑，适合作为前端交互原型和后续业务开发的起点。
