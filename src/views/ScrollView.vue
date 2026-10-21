@@ -3,7 +3,7 @@
     <div class='content'></div>
 </template>
 
-<script setup>
+<script setup type="ts">
 
 </script>
 
