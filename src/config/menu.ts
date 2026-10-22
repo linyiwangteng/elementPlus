@@ -14,6 +14,15 @@ export const sidebarMenu: MenuItemConfig[] = [
   { path: '/', label: '工作台', icon: DataBoard },
   { path: '/settings', label: '系统设置', icon: Setting },
   {
+    path: '/css',
+    label: 'CSS',
+    icon: Memo,
+    children: [
+      { path: '/css/flex', label: 'Flex 布局' },
+      { path: '/css/grid', label: 'Grid 布局' },
+    ],
+  },
+  {
     path: '/scripts',
     label: '话术管理',
     icon: ChatLineRound,

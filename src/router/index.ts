@@ -4,6 +4,20 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/css',
+      redirect: '/css/flex',
+    },
+    {
+      path: '/css/flex',
+      name: 'css-flex',
+      component: () => import('@/views/css/FlexView.vue'),
+    },
+    {
+      path: '/css/grid',
+      name: 'css-grid',
+      component: () => import('@/views/css/GridView.vue'),
+    },
+    {
       path: '/',
       name: 'dashboard',
       component: () => import('@/views/DashboardView.vue'),
