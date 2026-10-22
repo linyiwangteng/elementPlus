@@ -18,6 +18,11 @@ const router = createRouter({
       component: () => import('@/views/css/GridView.vue'),
     },
     {
+      path: '/mock',
+      name: 'mock',
+      component: () => import('@/views/MockView.vue'),
+    },
+    {
       path: '/',
       name: 'dashboard',
       component: () => import('@/views/DashboardView.vue'),

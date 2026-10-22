@@ -24,6 +24,17 @@ element plus design use
 
 ## 本地运行
 
+### Mock 数据请求
+
+启动 `npm run dev` 后，左侧“数据请求”（`/mock`）页面可搜索、分页及刷新模板列表，包含加载状态和失败提示。
+
+- 接口：`GET /api/templates?page=1&pageSize=10&keyword=`。
+- 返回：`{ code: 0, message: 'success', data: { list, total, page, pageSize } }`。
+- `page` 为正整数，`pageSize` 为 1–100 的整数，`keyword` 按名称模糊搜索；默认模拟 300ms 延迟。
+- 数据源：`mock/datas/list.ts`；接口处理：`mock/index.ts`；业务调用：`src/api/templates.ts`；统一请求：`src/utils/request.ts`（默认超时 10 秒）。
+- Mock 由 Vite 中间件提供，支持 `npm run dev` 与 `npm run preview`，浏览器 Network 面板可查看真实 HTTP 请求。静态部署 `dist/` 不包含 API 服务，上线需提供同协议后端接口或配置服务器代理。
+- 添加接口时在 `mock/index.ts` 注册路径和处理逻辑，再在 `src/api/` 增加对应调用函数。
+
 准备 Node.js 和 npm。仓库未通过 `engines` 或版本文件固定 Node.js 版本，需使用兼容 Vite 5 的环境。
 
 ```bash

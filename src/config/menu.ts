@@ -11,6 +11,7 @@ export interface MenuItemConfig {
 
 /** 左侧菜单配置，按数组顺序显示，支持多级子菜单。 */
 export const sidebarMenu: MenuItemConfig[] = [
+  { path: '/mock', label: '数据请求', icon: DataBoard },
   { path: '/', label: '工作台', icon: DataBoard },
   { path: '/settings', label: '系统设置', icon: Setting },
   {
@@ -29,7 +30,7 @@ export const sidebarMenu: MenuItemConfig[] = [
     children: [{ path: '/scripts/welcome', label: '欢迎语' }],
   },
   {
-    path: 'scroll',
+    path: '/scroll',
     label: '数字人列表',
     icon: Memo
   }
